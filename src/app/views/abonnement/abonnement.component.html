@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-topbar></app-topbar>
+    <br>
+    <div class="section">
+    <div class="container">
+     <div class="center blue-grey-text">
+         <h4 style="font-family: 'Times New Roman'; font-weight:bold">JE M'ABONNE</h4>
+        </div>
+    <div class="row">
+        <div class="col l4 m6 s12">
+            <img src="../../../assets/image/LOGOSENELEC1.png"  class="circle responsive-img" width="200px" alt="" srcset="" >
+         </div>
+         <div class="card-panel transparent col l6 m6 s12 hoverable">
+             <form  action=""  method="post" style="font-family: Verdana;font-weight:bold">
+                 <div class="row">
+                    <div class="input-field col l12 m12 s12" >
+                        <i class="material-icons prefix">security</i>
+                      <input type="text" name="IDENTIFIANT" placeholder="ENTRER VOTRE ID">
+                      <label for="" class="indigo-text text-darken-2">IDENTIFIANT</label>
+                    </div>
+                </div>
+                <div class="input-field" 
+            style="font-family: Verdana;font-weight:bold">
+                <select name="NATIONALITE" id="NATIONALITE">
+                 <option value="" disabled selected>CHOISISSEZ VOTRE NATIONALITE</option>
+                  <option value="SENEGALAIS">SENEGALAIS(E)</option>
+                  <option value="ETRANGER">ETRANGER(E)</option>
+                </select>
+                <label for="" class="indigo-text text-darken-2">NATIONALITE</label>
+            </div> 
+                <div class="input-field">
+                    <i class="material-icons prefix">security</i>
+                      <input type="number" name="CNI" id="CNI" placeholder="ENTRER VOTRE NIN">
+                      <label for="" class="indigo-text text-darken-2">NUMERO IDENTIFICATION NATIONALE</label>
+                 </div> 
+                <div class="file-field input-field">
+                    <div class="btn indigo darken-3">
+                        <span>COPIE CNI<i class="material-icons">attach_file</i></span>
+                        <input  type="file" name="COPYCNI" id="COPYCNI">
+                    </div>
+                     <div class="file-path-wrapper">
+                         <input type="text" class="file-path">
+                     </div>
+                </div>
+                <div class="file-field input-field">
+                    <div class="btn green darken-3">
+                        <span>COPIE PASSPORT<i class="material-icons">attach_file</i></span>
+                        <input type="file" name="archive" id="archive">
+                    </div>
+                     <div class="file-path-wrapper">
+                         <input type="text" class="file-path">
+                     </div>
+                </div>
+                <div class="center" style="margin-bottom: 15px;">
+                    <button type="reset"
+                     class="btn btn-large red darken-3 waves-effect waves-light hoverable" 
+                    style="border-radius:100px;">
+                        <i class="material-icons prefix">cancel</i>
+                        ANNULER
+                    </button>
+                    <button type="submit"
+                    class="btn btn-large indigo darken-3 waves-effect waves-light hoverable" 
+                   style="border-radius:100px;">
+                       <i class="material-icons prefix">done</i>
+                       VALIDER
+                   </button>
+                </div>
+             </form>
+         </div>
+    </div>
+</div>
+</div>
+<div class="preloader-wrapper indigo medium active" id="loading">
+    <div class="spinner-layer spinner-white-only">
+      <div class="circle-clipper indigo darken-3 left">
+        <!-- <div class="circle"></div> -->
+      </div><div class="gap-patch">
+        <!-- <div class="circle red darken-3"></div> -->
+      </div><div class="circle-clipper red darken-3 right">
+        <!-- <div class="circle red"></div> -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

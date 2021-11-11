@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <div class="section">
+        <h6 class="white-text center" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">JE M'INSCRIS</h6>
+        <div class="col l12 m12 s12">
+            <div class="card-panel transparent hoverable" id="card1">
+                <span class="card-title center"></span>
+                <div class="card-panel cyan darken-1 hoverable center">
+                    <i class="material-icons large white-text">person</i>
+                </div>
+                <form action="" id="formulaire" [formGroup]="Utilisateurform" (ngSubmit)="onSubmit()">
+             <div class="row">
+                <div class="input-field col s6 m6 l6">
+                    <i class="material-icons prefix white-text">person</i>
+                    <input type="text" formControlName="nom" name="nom" id="nom" placeholder="NOM" class="white-text">
+                    <span *ngIf="Utilisateurform.get('nom').errors && (Utilisateurform.get('nom').touched || Utilisateurform.get('nom').dirty)">
+                    <span class="red-text"  *ngIf="Utilisateurform.get('nom').errors.required">
+                                    Ce champs est obligatoire
+                                </span>
+                  <span class="red-text"  *ngIf="Utilisateurform.get('nom').errors.minlength">
+                                                           Un nom doit etre composé au minimum de 2 lettres
+                                                      </span>
+         <span class="red-text"  *ngIf="Utilisateurform.get('nom').errors.pattern">
+                                                           Ce champs ne doit pas contenir des caracteres speciaux
+                                                      </span>
+                </span>
+
+                </div>
+                <div class="input-field col s6 m6 l6">
+                    <i class="material-icons prefix white-text">person</i>
+                    <input type="text" placeholder="PRENOM" class="white-text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 m6 l6">
+                    <i class="material-icons prefix white-text">home</i>
+                    <input type="text" placeholder="ADRESSE" class="white-text">
+                </div>
+                <div class="input-field col s6 m6 l6">
+                    <i class="material-icons prefix white-text">phone</i>
+                    <input type="number" placeholder="TELEPHONE" class="white-text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12 l12">
+                    <i class="material-icons prefix white-text">email</i>
+                    <input type="email" placeholder="EMAIL" class="white-text">
+                </div>      
+            </div>
+            <div class="row">
+                <div class="input-field col s6 m6 l6">
+                    <i class="material-icons prefix white-text">lock</i>
+                    <input type="password" placeholder="MOT DE PASSE" class="white-text">
+                </div>
+                <div class="input-field col s6 m6 l6">
+                    <i class="material-icons prefix white-text">lock</i>
+                    <input type="password" placeholder="CONFIRMATION" class="white-text">
+                </div>
+            </div>
+                <div class="center">
+                    <button type="reset"
+                     class="btn btn-large red darken-1 waves-effect waves-light hoverable" 
+                    style="border-radius:100px;">
+                        <i class="material-icons prefix">cancel</i>
+                        ANNULER
+                    </button>
+                    <button type="submit"
+                    class="btn btn-large cyan darken-1 waves-effect waves-light hoverable" 
+                   style="border-radius:100px;">
+                       <i class="material-icons prefix">done</i>
+                       VALIDER
+                   </button>
+                </div>
+            </form>
+           </div>
+        </div>
+    </div>
+</div>
+<!-- section chargement de la page -->
+</body>
+</html>
+

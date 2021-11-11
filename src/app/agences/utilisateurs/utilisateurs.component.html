@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+<nav class="cyan darken-3 section" style="padding-bottom: 120px;">
+    <div class="nav-wrapper">
+        <div class="container">
+        <ul class="left-on-med-and-down">
+  <li>
+      <button class="btn btn-large yellow darken-3 hoverable" (click)="onGetAllSubscriber()"  id="btnAfficher" style="border-radius :100px;">ALL USER</button>
+  </li>
+  <li>
+    <button class="btn  green darken-3 darken-2 hoverable" style="border-radius :100px;">
+      excel
+    </button>
+  </li>
+  <li>
+    <button class="btn  red darken-3 hoverable" style="border-radius :100px;">
+      PDF
+    </button>
+  </li>
+  <li class="right">
+    <form #f="ngForm"  (ngSubmit)="onSearch(f.value)">
+      <div class="row">
+      <div class="input-field col l8 m8 s8">
+        <i class="material-icons prefix grey-text text-lighten-2 hoverable" 
+        style="font-weight: bold;">search</i>
+        <input type="text" ngModel name="recherche" placeholder="RECHERCHE?" 
+        class="white-text grey darken-3"
+        style="border-radius: 30px;" ngModel>
+      </div>
+      <button type="submit" class="btn grey darken-3 waves-effect col l3 m3 s3 pulse"
+      style="margin-top: 13px;">
+          search
+      </button>
+    </div>
+    </form>
+  </li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container">
+    <div class="card-panel grey darken-3 section" id="cardUser" *ngIf="TabUsers">
+      <span class="card-title white-text"
+       style="font-family:'Times New Roman';font-weight:bold;
+       font-size:25px;">
+       Liste des inscrits
+      </span>
+    <table class="highlight striped">
+       <thead class="white-text center">
+           <th>Code</th>
+           <th>Nom</th>
+           <th>Prenom</th>
+           <th>Adresse</th>
+           <th>Telephone</th>
+           <th>Actions</th>
+       </thead>
+       <tbody *ngFor="let s of TabUsers; let i=index">
+         <tr class="card transparent hoverable grey-text text-lighten-1"
+         style="font-weight: bold;">
+           <td>{{s.code}}</td>
+           <td>{{s.nom}}</td>
+           <td>{{s.prenom}}</td>
+           <td>{{s.adresse}}</td>
+           <td>{{s.telephone}}</td>
+           <td id="man">
+             <a  href="" id="bloquer"class="btn btn-floating transparent">
+               <i class="material-icons green-text">lock</i>
+             </a>
+             <a href="" id="delete" class="btn btn-floating transparent">
+              <i class="material-icons red-text">delete</i>
+            </a>
+           </td>
+         </tr>
+       </tbody>
+    </table>
+   </div>
+</div>
+<div class="preloader-wrapper white medium active" id="loading">
+  <div class="spinner-layer spinner-white-only">
+    <div class="circle-clipper left grey">
+      <!-- <div class="circle"></div> -->
+    </div><div class="gap-patch">
+      <!-- <div class="circle"></div> -->
+    </div><div class="circle-clipper right black">
+      <!-- <div class="circle"></div> -->
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,42 @@
+
+<div class="container">
+    <div class="section">
+    <h4 class="blue-grey-text center">AUTHENTIFICATION POUR L'AGENCE EN LIGNE</h4>
+    <br><br>
+    <div class="row">
+        <div class="col l6 m6 s6">
+            <img src="../../../assets/image/LOGOSENELEC1.png" alt="" srcset="" width="200px">
+        </div>
+        <div class="card-panel col l6 m6 s6 transparent hoverable">
+    <form action="" #f="ngForm" (ngSubmit)="AuthSenelec(f.value)">
+        <div class="input-field">
+            <i class="material-icons"></i>
+            <input ngModel type="text" name="matricule" id="Matric"  
+            style="font-family:'Times New Roman';font-weight:bold" [(ngModel)]="authentification.matricule" >
+            <label for="" class="blue-grey-text" 
+            style="font-family:'Times New Roman';font-weight:bold">Matricule</label>
+        </div>
+        <button type="submit" class="btn btn-large right indigo darken-3 waves-effect waves-light hoverable"
+                style="border-radius: 100px; margin-bottom: 10px;">
+            <i class="material-icons">done</i>
+            VALIDER
+        </button>
+        <h4 class="red-text grey darken-3 center"
+         style="border-radius: 100px;" id="erreur">
+            {{error}}
+        </h4>
+    </form>
+</div>
+</div> 
+</div>
+<div class="preloader-wrapper indigo medium active" id="loading">
+    <div class="spinner-layer spinner-white-only">
+      <div class="circle-clipper indigo darken-3 left">
+        <!-- <div class="circle"></div> -->
+      </div><div class="gap-patch">
+        <!-- <div class="circle red darken-3"></div> -->
+      </div><div class="circle-clipper red darken-3 right">
+        <!-- <div class="circle red"></div> -->
+      </div>
+    </div>
+  </div>

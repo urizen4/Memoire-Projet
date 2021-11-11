@@ -1,0 +1,13 @@
+/* nav{
+    background-image: url('../../../assets/image/backImLog2.jpg');
+} */
+
+
+#cardUser
+{
+ position: absolute;
+ top: 27%;
+ left: 15%;
+ width: 70%;
+ border-radius: 30px;
+}

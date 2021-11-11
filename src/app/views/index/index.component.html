@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <br>
+       <br>
+       <div class="center">
+        <button class="btn btn-floating btn-large cyan waves-effect waves-light pulse" id="Afficher">
+            <i class="material-icons">login</i>
+        </button>
+    </div>
+       <br>
+       <br>
+    <div class="row">
+        <div class="col l6 m6 s12">
+            <div class="card-panel transparent hoverable" id="card1">
+                <div class="card-panel cyan darken-1 hoverable center">
+                    <i class="material-icons large white-text">person</i>
+                </div>
+                <form action="" id="formulaire">
+                <div class="input-field">
+                    <i class="material-icons prefix white-text">login</i>
+                    <input type="text" placeholder="USERNAME" class="white-text">
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix white-text">key</i>
+                    <input type="password" placeholder="*******">
+                </div>
+                <div class="center">
+                    <button type="submit"
+                     class="btn btn-large cyan darken-1 waves-effect waves-light pulse" 
+                    style="border-radius:100px;" (click)="redirecTo()">
+                        <i class="material-icons prefix">perm_identity</i>
+                        SE CONNECTER
+                    </button>
+                </div>
+                <br>
+                <a href="" routerLink="/inscrire" class="white-text hoverable">Creer un compte</a>
+            </form>
+           </div>
+        </div>
+        <div class="col l6 m6 s12  white-text">
+            <h1 class="center white-text" style="font-family: 'Times New Roman', Times, serif;font-weight:bold">Univers-2E</h1>
+            <h5 class="green-text center" style="font-family: 'Times New Roman', Times, serif;font-weight:bold">LE FUTURE NOUS APARTIENT</h5>
+            <h5 class="yellow-text center" style="font-family: 'Times New Roman', Times, serif;font-weight:bold">LE CLIENT DEVIENT ROI</h5>
+            <h4 class="red-text center" style="font-family: 'Times New Roman', Times, serif;font-weight:bold">BE SMARt BE GREAt AND BE HAPPy</h4>
+        </div>
+    </div>
+</div>
+</body>
+</html>
